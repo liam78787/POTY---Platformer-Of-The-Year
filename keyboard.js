@@ -22,9 +22,13 @@ var Keyboard = function(){
 	this.KEY_SHIFT = 16;
 };
 
+var press = false;
+
 Keyboard.prototype.onKeyDown = function(evt)
 {
 	this.keys[evt.keyCode] = true;
+	press = true;
+	
 };
 
 Keyboard.prototype.onKeyUp = function(evt)
